@@ -1,0 +1,9 @@
+---
+instances: 1
+memory: 768M
+applications:
+  - name: greeter-pcf-sample
+    random-route: true
+    buildpack: java_buildpack
+    env:
+      SPRING_PROFILES_ACTIVE: dev
