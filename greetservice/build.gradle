@@ -1,7 +1,7 @@
 
 buildscript {
     ext {
-        springBootVersion = '1.5.8.RELEASE'
+        springBootVersion = '1.5.6.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -10,16 +10,7 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
-buildscript {
-    repositories {
-        mavenCentral()
-        maven { url "https://repo.spring.io/plugins-release/" }
-        maven { url "https://repo.spring.io/libs-release/" }
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE")
-    }
-}
+
 
 
 apply plugin: 'java'
@@ -47,7 +38,7 @@ targetCompatibility = 1.8
 
 ext {
     springCloudServicesVersion = '1.5.0.RELEASE'
-    springCloudVersion = 'Edgware.RELEASE'
+    springCloudVersion = 'Camden.SR4'
 }
 
 dependencies {

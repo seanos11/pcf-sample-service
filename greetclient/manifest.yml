@@ -2,7 +2,7 @@
 instances: 1
 memory: 768M
 applications:
-  - name: greeter-pcf-sample
+  - name: greetclient
     random-route: true
     buildpack: java_buildpack
     env:

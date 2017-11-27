@@ -54,27 +54,27 @@ public class GreeterApplication {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello(@RequestParam(value="salutation", defaultValue="Hello") String salutation, @RequestParam(value="name", defaultValue="Bob") String name) {
-        URI uri = UriComponentsBuilder.fromUriString("//message-generation/greeting")
+        URI uri = UriComponentsBuilder.fromUriString("//greetservice/greeting")
             .queryParam("salutation", salutation)
             .queryParam("name", name)
             .build()
             .toUri();
 
         Greeting greeting = rest.getForObject(uri, Greeting.class);
-        return greeting.getMessage();
+        return greeting.getContent();
     }
 
     private static class Greeting {
 
-        private String message;
+        private String content;
 
         @JsonCreator
-        public Greeting(@JsonProperty("message") String message) {
-            this.message = message;
+        public Greeting(@JsonProperty("content") String content) {
+            this.content = content;
         }
 
-        public String getMessage() {
-            return this.message;
+        public String getContent() {
+            return this.content;
         }
 
     }
