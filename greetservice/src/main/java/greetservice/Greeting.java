@@ -14,7 +14,7 @@ public class Greeting {
         return id;
     }
 
-    public String getName() {
+    public String getContent() {
         return content;
     }
 }
