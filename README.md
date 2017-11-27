@@ -2,8 +2,8 @@
 sample apps to tryout pcf and spring cloud service registry
 
 Greetservice
-https://<greetservice>/greeting?name=<name>
+https://[greetservice]/greeting?name=[name]
   
 Greetclient
- https://<greetclient>/hello?name=<name>
+ https://[greetclient]/hello?name=[name]
  
